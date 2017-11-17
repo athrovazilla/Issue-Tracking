@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS APP</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/chance.js"></script>
+    </head>
+    <body onload="fetchIssues()">
+        <div class="container">
+            <h1>JS Issue Tracker<small class="by"> by Selby </small></h1>
+
+            <div class="jumbotron">
+                <h3>Add New Issue:</h3>
+                <form id="issueInputForm">
+                    <div class="form-group">
+                        <label for="issueDescInput">Description</label>
+                        <input type="text" class="form-control" id="issueDescInput" placeholder="Describe the Issue">
+                    </div>
+
+                    <div class="form-group">
+                            <label for="issueSeverityInput">Severity</label>
+                            <select id="issueSeverityInput" class="form-control">
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                                <label for="issueAssignedToInput">Assigned To:</label>
+                                <input type="text" class="form-control" id="issueAssignedToInput" placeholder="Enter Responsible To...">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add</button>
+                </form>
+            </div>
+            <div class="col-lg-12">
+                <div id="issuesList">
+                    <div id="issues">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>&copy selby 2017</p>
+            </div>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
